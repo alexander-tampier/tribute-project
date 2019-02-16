@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=:300,400,700");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.7;
+        color: rgb(0, 0, 0, 0.5);
+        padding: 30px;
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        margin: 0 auto;
+        width: 80rem;
+        max-width: 90%;
+        border-radius: 4px;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .special-image {
+        height: 55vh;
+        background-image: radial-gradient(
+            rgba(35, 37, 38, 0),
+            rgba(65, 67, 69, 1)
+          ),
+          url(https://res.cloudinary.com/dxrk4zuc4/image/upload/v1551125767/codepen/book-education-graphing-paper-167682.jpg);
+        background-size: cover;
+        background-position: top;
+      }
+
+      #main {
+        background: #fff;
+      }
+
+      #main h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #1e1f23;
+        position: relative;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+      }
+
+      #main h1::after {
+        content: "";
+        position: absolute;
+        margin: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 10%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.125);
+      }
+
+      #main h2 {
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 0.8rem;
+        letter-spacing: 0.25rem;
+        margin: 0;
+        color: #bbb;
+      }
+
+      .section-title {
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+
+      .section-article {
+        padding: 6rem 0 4rem 0;
+        background-color: #f4f4f4;
+      }
+
+      .inner {
+        margin: 0 auto;
+        width: 90%;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      #img-div {
+        /* change to unhide */
+        width: 30%;
+      }
+
+      #image {
+        display: block;
+        border-radius: 50%;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      #img-caption {
+        font-style: italic;
+        font-size: smaller;
+        text-align: center;
+        margin-top: 0.7rem;
+      }
+
+      #tribute-info {
+        width: 66%;
+      }
+
+      #tribute-link {
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 2rem;
+        display: inline-block;
+        color: #000;
+      }
+
+      #tribute-link:hover {
+        color: #243aab;
+      }
+
+      #tribute-link::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #243aab;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      }
+
+      #tribute-link:hover::after {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="special-image"></div>
+      <div id="main">
+        <div class="section-title">
+          <h1 id="title">Dr. phil. Kurt Gödel</h1>
+          <h2>American-Austrian logician</h2>
+        </div>
+        <div class="section-article">
+          <div class="inner">
+            <!-- 2 Columns flex -->
+            <div class="flex">
+              <!-- column1 -->
+              <div id="img-div">
+                <img
+                  id="image"
+                  src="https://upload.wikimedia.org/wikipedia/en/4/42/Kurt_g%C3%B6del.jpg"
+                  alt="Kurt Gödel"
+                />
+                <div id="img-caption">
+                  Kurt Friedrich Gödel was an Austrian, and later American,
+                  logician, mathematician, and philosopher.
+                </div>
+              </div>
+              <!-- column2 -->
+              <div id="tribute-info">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kurt_G%C3%B6del_signature.svg/150px-Kurt_G%C3%B6del_signature.svg.png"
+                  alt="Kurt Gödel Signature"
+                />
+
+                <p><strong>Important publications</strong></p>
+                <p>In German:</p>
+                <ul>
+                  <li>
+                    1930, “Die Vollständigkeit der Axiome des logischen
+                    Funktionenkalküls.” Monatshefte für Mathematik und Physik
+                    37: 349–60.
+                  </li>
+                  <li>
+                    1931, “Über formal unentscheidbare Sätze der Principia
+                    Mathematica und verwandter Systeme, I.” Monatshefte für
+                    Mathematik und Physik 38: 173–98.
+                  </li>
+                  <li>
+                    1932, “Zum intuitionistischen Aussagenkalkül”, Anzeiger
+                    Akademie der Wissenschaften Wien 69: 65–66.
+                  </li>
+                </ul>
+                <p>In English:</p>
+                <ul>
+                  <li>
+                    1940, The Consistency of the Axiom of Choice and of the
+                    Generalized Continuum Hypothesis with the Axioms of Set
+                    Theory. Princeton University Press.
+                  </li>
+                  <li>
+                    1941, “What is Cantor’s continuum problem?” The American
+                    Mathematical Monthly 54: 515–25. Revised version in Paul
+                    Benacerraf and Hilary Putnam, eds., 1984 (1964). Philosophy
+                    of Mathematics: Selected Readings. Cambridge Univ. Press:
+                    470–85.<br />
+                    1950, “Rotating Universes in General Relativity Theory.”
+                    Proceedings of the international Congress of Mathematicians
+                    in Cambridge, 1: 175–81
+                  </li>
+                </ul>
+                <p>In English translation:</p>
+                <ul>
+                  <li>
+                    <p>
+                      Kurt Godel, 1992. On Formally Undecidable Propositions Of
+                      Principia Mathematica And Related Systems, tr. B. Meltzer,
+                      with a comprehensive introduction by Richard Braithwaite.
+                      Dover reprint of the 1962 Basic Books edition.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Kurt Godel, 2000.[37] On Formally Undecidable Propositions
+                      Of Principia Mathematica And Related Systems, tr. Martin
+                      Hirzel
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Jean van Heijenoort, 1967. A Source Book in Mathematical
+                      Logic, 1879–1931. Harvard Univ. Press.*
+                    </p>
+                    <ul>
+                      <li>
+                        <ol>
+                          The completeness of the axioms of the functional
+                          calculus of logic, 582–91.
+                        </ol>
+                      </li>
+                      <li>
+                        1931, “Some metamathematical results on completeness and
+                        consistency,” 595–96. Abstract to (1931).
+                      </li>
+                      <li>
+                        1932, “On formally undecidable propositions of Principia
+                        Mathematica and related systems,” 596–616.
+                      </li>
+                      <li>1931a. “On completeness and consistency,” 616–17.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>“My philosophical viewpoint”, c. 1960, unpublished.</p>
+                  </li>
+                  <li>
+                    <p>
+                      “The modern development of the foundations of mathematics
+                      in the light of philosophy”, 1961, unpublished.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Collected Works: Oxford University Press: New York.
+                      Editor-in-chief: Solomon Feferman.
+                    </p>
+                    <ul>
+                      <li>
+                        Volume I: Publications 1929–1936 ISBN 978-0-19-503964-1
+                        / Paperback: ISBN 978-0-19-514720-9,
+                      </li>
+                      <li>
+                        Volume II: Publications 1938–1974 ISBN 978-0-19-503972-6
+                        / Paperback: ISBN 978-0-19-514721-6,
+                      </li>
+                      <li>
+                        Volume III: Unpublished Essays and Lectures ISBN
+                        978-0-19-507255-6 / Paperback: ISBN 978-0-19-514722-3,
+                      </li>
+                      <li>
+                        Volume IV: Correspondence, A–G ISBN 978-0-19-850073-5,
+                      </li>
+                      <li>
+                        Volume V: Correspondence, H–Z ISBN 978-0-19-850075-9.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <a
+                  id="tribute-link"
+                  href="https://en.wikipedia.org/wiki/Kurt_G%C3%B6del"
+                  target="_blank"
+                  >Kurt Gödel Wikipedia Reference</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Codecamp tests -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
